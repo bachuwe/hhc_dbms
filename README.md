@@ -1,5 +1,8 @@
 # HHC Takoradi Church Database Management System
 
+[![Deploy to InfinityFree](https://github.com/bachuwe/hhc_dbms/actions/workflows/deploy.yml/badge.svg)](https://github.com/bachuwe/hhc_dbms/actions/workflows/deploy.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ![HHC Takoradi](hhc_dbms/hhctak.jpg)
 
 A comprehensive church management system for Holy Hill Chapel Takoradi, built with PHP and MySQL.
@@ -84,6 +87,10 @@ A comprehensive church management system for Holy Hill Chapel Takoradi, built wi
    - Create an account or use existing credentials
 
 ## Deployment
+
+### 🚀 Quick Start
+
+**New to deployment?** Check out [QUICKSTART.md](QUICKSTART.md) for a 5-minute setup guide!
 
 ### Automated Deployment (GitHub Actions)
 
