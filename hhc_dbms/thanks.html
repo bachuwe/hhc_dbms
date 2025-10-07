@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - HHC Takoradi</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .success-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            background: var(--white);
+            padding: var(--spacing-12);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-xl);
+            max-width: 500px;
+            margin: var(--spacing-4);
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: var(--success-color);
+            margin-bottom: var(--spacing-6);
+            animation: bounceIn 1s ease-out;
+        }
+
+        .success-title {
+            font-size: var(--text-4xl);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-6);
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .success-message {
+            font-size: var(--text-lg);
+            color: var(--gray-600);
+            margin-bottom: var(--spacing-8);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .logo-container {
+            margin-bottom: var(--spacing-6);
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-4);
+            animation: fadeIn 1s ease-out 1.2s both;
+        }
+
+        @media (min-width: 640px) {
+            .action-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        
+        <h1 class="success-title">Thank You!</h1>
+        
+        <p class="success-message">
+            Your submission has been received successfully. We appreciate your participation and will process your information accordingly.
+        </p>
+        
+        <div class="logo-container">
+            <img src="hhctak.jpg" alt="HHC Takoradi Logo" class="logo">
+        </div>
+        
+        <div class="action-buttons">
+            <a href="form.html" class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+                Add Another Member
+            </a>
+            <a href="index.php" class="btn btn-outline">
+                <i class="fas fa-home"></i>
+                Back to Dashboard
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Auto redirect after 10 seconds
+        setTimeout(() => {
+            const container = document.querySelector('.success-container');
+            const countdown = document.createElement('div');
+            countdown.style.position = 'fixed';
+            countdown.style.bottom = '20px';
+            countdown.style.right = '20px';
+            countdown.style.background = 'var(--primary-color)';
+            countdown.style.color = 'white';
+            countdown.style.padding = '10px 20px';
+            countdown.style.borderRadius = '20px';
+            countdown.style.fontSize = '14px';
+            countdown.style.zIndex = '1000';
+            countdown.innerHTML = '<i class="fas fa-clock"></i> Redirecting in <span id="countdown">5</span>s';
+            document.body.appendChild(countdown);
+            
+            let seconds = 5;
+            const timer = setInterval(() => {
+                seconds--;
+                document.getElementById('countdown').textContent = seconds;
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    window.location.href = 'index.php';
+                }
+            }, 1000);
+        }, 10000);
+    </script>
+</body>
+</html>
