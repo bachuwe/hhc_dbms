@@ -1,0 +1,53 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Database credentials
+db_config.php
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+error_log
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+tmp/
+temp/
+
+# Node modules (if using npm for any frontend tools)
+node_modules/
+npm-debug.log
+
+# Composer (if using)
+vendor/
+composer.lock
+
+# Backup files
+*.sql.backup
+*.sql.gz
+backups/
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# FTP deployment files
+.ftpconfig
+.ftppass
+
+# Test files
+phpunit.xml
+.phpunit.result.cache
+tests/_output/
