@@ -92,6 +92,8 @@ A comprehensive church management system for Holy Hill Chapel Takoradi, built wi
 
 **New to deployment?** Check out [QUICKSTART.md](QUICKSTART.md) for a 5-minute setup guide!
 
+**Test your setup:** Run `./test-deployment.sh` to verify everything is ready for deployment.
+
 ### Automated Deployment (GitHub Actions)
 
 This project includes automated deployment via GitHub Actions.
